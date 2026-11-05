@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
+
+:root {
+  --bg: #07080f;
+  --surface: #0e101c;
+  --surface-2: #141729;
+  --border: #1f2338;
+  --text: #e6e8f2;
+  --soft: #b8bdd4;
+  --muted: #8a90a8;
+  --accent: #8b7cff;
+  --button: #6a5cf0;
+  --red: #ff6b6b;
+  --green: #4ade80;
+  --teal: #4fd1c5;
+  --amber: #f5b84a;
+  --branch: #3d4263;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #f7f7fb;
+  --surface: #ffffff;
+  --surface-2: #eeeef7;
+  --border: #dcdde9;
+  --text: #14162a;
+  --soft: #3a3e55;
+  --muted: #5b6078;
+  --accent: #5a4ae0;
+  --button: #5a4ae0;
+  --red: #c92a2a;
+  --green: #15803d;
+  --teal: #0f766e;
+  --amber: #b45309;
+  --branch: #b4b6cc;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-ink: var(--text);
+  --color-soft: var(--soft);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-button: var(--button);
+  --color-red: var(--red);
+  --color-green: var(--green);
+  --color-teal: var(--teal);
+  --color-amber: var(--amber);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-text-size-adjust: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* The concept tree. Each row connects to its parent with a line drawn in CSS. */
+.tree li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.tree li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-left: 1.5px solid var(--branch);
+}
+
+.tree li:last-child::before {
+  bottom: auto;
+  height: 24px;
+}
+
+.tree li::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 11px;
+  border-top: 1.5px solid var(--branch);
+}
