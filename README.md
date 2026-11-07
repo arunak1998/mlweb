@@ -27,6 +27,10 @@ The page, tree entry, search and link preview are all created automatically.
 - **Add a new category:** add the name to `CATEGORIES`.
 - **Add a diagram:** set `diagram` to one of the `DiagramId` values. New diagrams go in `components/Diagram.tsx`.
 
+## Add a metric
+
+The Metrics page reads from `content/metrics.ts`. Copy an existing metric inside a group in `METRIC_GROUPS` and fill in every field. To show it in "Which metric should I use?", add a line to `QUICK_PICKS` with its `id`.
+
 ## Deploy to Vercel
 
 1. Push this folder to a GitHub repo.
