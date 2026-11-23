@@ -126,13 +126,13 @@ export default async function ConceptPage({ params }: Props) {
           <p className="text-soft">{concept.example}</p>
         </Section>
 
+        <Section title="Common mistake">
+          <p className="text-soft">{concept.mistake}</p>
+        </Section>
+
         <Section title="Interview question">
           <p className="font-semibold">{concept.question.q}</p>
           <p className="mt-1.5 text-soft">{concept.question.a}</p>
-        </Section>
-
-        <Section title="Common mistake">
-          <p className="text-soft">{concept.mistake}</p>
         </Section>
 
         {children.length > 0 && (
