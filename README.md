@@ -31,6 +31,10 @@ The page, tree entry, search and link preview are all created automatically.
 
 The Metrics page reads from `content/metrics.ts`. Copy an existing metric inside a group in `METRIC_GROUPS` and fill in every field. To show it in "Which metric should I use?", add a line to `QUICK_PICKS` with its `id`.
 
+## Add a preprocessing technique
+
+The Data Prep page reads from `content/preprocessing.ts`. Copy an existing technique in `TECHNIQUES` and fill in every field. `before` and `after` are the small example tables, and `marked` highlights the rows that change.
+
 ## Deploy to Vercel
 
 1. Push this folder to a GitHub repo.
